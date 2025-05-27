@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ElectroShop - Electronics & Accessories</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="component.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container header-content">
+        <div class="header-left">
+          <a href="index.html" class="logo">ElectroShop</a>
+          <nav class="main-nav">
+            <div class="nav-item dropdown">
+              <button class="nav-button" id="electronicsDropdown">
+                Electronics
+                <svg
+                  class="dropdown-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="dropdown-menu" id="electronicsMenu">
+                <a href="electronics.html" class="dropdown-item">
+                  <div class="dropdown-title">All Electronics</div>
+                  <div class="dropdown-desc">
+                    Browse our full range of electronic products
+                  </div>
+                </a>
+                <a href="smartphones.html" class="dropdown-item">
+                  <div class="dropdown-title">Smartphones</div>
+                  <div class="dropdown-desc">
+                    Latest smartphones with cutting-edge technology
+                  </div>
+                </a>
+                <a href="accessories.html" class="dropdown-item">
+                  <div class="dropdown-title">Accessories</div>
+                  <div class="dropdown-desc">
+                    Enhance your device experience
+                  </div>
+                </a>
+              </div>
+            </div>
+            <a href="new-arrivals.html" class="nav-link">New Arrivals</a>
+            <a href="deals.html" class="nav-link">Deals</a>
+          </nav>
+        </div>
+        <div class="header-right">
+          <form class="search-form" id="searchForm">
+            <input
+              type="search"
+              class="search-input"
+              placeholder="Search products..."
+              id="searchInput"
+            />
+            <button type="submit" class="search-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.3-4.3" />
+              </svg>
+            </button>
+          </form>
+          <div class="header-actions">
+            <a href="cart.html" class="action-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="8" cy="21" r="1" />
+                <circle cx="19" cy="21" r="1" />
+                <path
+                  d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+                />
+              </svg>
+            </a>
+            <a href="account.html" class="action-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="container hero-content">
+          <div class="hero-text">
+            <h1 class="hero-title">The Latest Technology at Your Fingertips</h1>
+            <p class="hero-description">
+              Discover our wide range of cutting-edge electronics and
+              accessories. From smartphones to wearables, we've got you covered.
+            </p>
+            <div class="hero-buttons">
+              <a href="electronics.html" class="btn btn-primary">Shop Now</a>
+              <a href="smartphones.html" class="btn btn-outline"
+                >View Smartphones</a
+              >
+            </div>
+          </div>
+          <div class="hero-image">
+            <img
+              src="https://via.placeholder.com/500x400/3b82f6/ffffff?text=Latest+Electronics"
+              alt="Latest Electronics"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Products -->
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Featured Products</h2>
+            <div class="sort-controls">
+              <label for="sortSelect">Sort by:</label>
+              <select id="sortSelect" class="sort-select">
+                <option value="default">Default</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="rating">Highest Rated</option>
+              </select>
+            </div>
+          </div>
+          <div class="products-grid" id="featuredProducts">
+            <!-- Products will be loaded dynamically -->
+          </div>
+          <div class="section-footer">
+            <a href="electronics.html" class="btn btn-outline"
+              >View All Products</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Categories Section -->
+      <section class="section bg-light">
+        <div class="container">
+          <h2 class="section-title text-center">Browse Categories</h2>
+          <div class="categories-grid">
+            <div class="category-card">
+              <div class="category-image">
+                <img
+                  src="https://via.placeholder.com/400x300/1f2937/ffffff?text=Smartphones"
+                  alt="Smartphones"
+                />
+                <div class="category-overlay">
+                  <h3 class="category-title">Smartphones</h3>
+                  <p class="category-description">
+                    Explore the latest smartphones with advanced features and
+                    cutting-edge technology.
+                  </p>
+                  <a href="smartphones.html" class="btn btn-outline-white"
+                    >Shop Smartphones</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="category-card">
+              <div class="category-image">
+                <img
+                  src="https://via.placeholder.com/400x300/1f2937/ffffff?text=Accessories"
+                  alt="Accessories"
+                />
+                <div class="category-overlay">
+                  <h3 class="category-title">Accessories</h3>
+                  <p class="category-description">
+                    Enhance your devices with our premium selection of
+                    accessories.
+                  </p>
+                  <a href="accessories.html" class="btn btn-outline-white"
+                    >Shop Accessories</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsletter Section -->
+      <section class="newsletter">
+        <div class="container">
+          <div class="newsletter-content">
+            <h2 class="newsletter-title">Stay Updated</h2>
+            <p class="newsletter-description">
+              Subscribe to our newsletter to receive updates on our latest
+              products, special offers, and more.
+            </p>
+            <form class="newsletter-form" id="newsletterForm">
+              <input
+                type="email"
+                class="newsletter-input"
+                placeholder="Your email address"
+                required
+              />
+              <button type="submit" class="btn btn-white">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3 class="footer-title">ElectroShop</h3>
+            <p class="footer-description">
+              Your one-stop destination for all electronics and accessories.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4 class="footer-subtitle">Shop</h4>
+            <ul class="footer-links">
+              <li><a href="electronics.html">Electronics</a></li>
+              <li><a href="smartphones.html">Smartphones</a></li>
+              <li><a href="accessories.html">Accessories</a></li>
+              <li><a href="new-arrivals.html">New Arrivals</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4 class="footer-subtitle">Support</h4>
+            <ul class="footer-links">
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="faq.html">FAQs</a></li>
+              <li><a href="shipping.html">Shipping Info</a></li>
+              <li><a href="returns.html">Returns & Refunds</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4 class="footer-subtitle">Stay Connected</h4>
+            <div class="social-links">
+              <a href="#" class="social-link">Facebook</a>
+              <a href="#" class="social-link">Instagram</a>
+              <a href="#" class="social-link">Twitter</a>
+              <a href="#" class="social-link">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 ElectroShop. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

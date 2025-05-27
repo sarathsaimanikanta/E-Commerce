@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deals & Offers - ElectroShop</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="component.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container header-content">
+        <div class="header-left">
+          <a href="index.html" class="logo">ElectroShop</a>
+          <nav class="main-nav">
+            <div class="nav-item dropdown">
+              <button class="nav-button" id="electronicsDropdown">
+                Electronics
+                <svg
+                  class="dropdown-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="dropdown-menu" id="electronicsMenu">
+                <a href="electronics.html" class="dropdown-item">
+                  <div class="dropdown-title">All Electronics</div>
+                  <div class="dropdown-desc">
+                    Browse our full range of electronic products
+                  </div>
+                </a>
+                <a href="smartphones.html" class="dropdown-item">
+                  <div class="dropdown-title">Smartphones</div>
+                  <div class="dropdown-desc">
+                    Latest smartphones with cutting-edge technology
+                  </div>
+                </a>
+                <a href="accessories.html" class="dropdown-item">
+                  <div class="dropdown-title">Accessories</div>
+                  <div class="dropdown-desc">
+                    Enhance your device experience
+                  </div>
+                </a>
+              </div>
+            </div>
+            <a href="new-arrivals.html" class="nav-link">New Arrivals</a>
+            <a href="deals.html" class="nav-link">Deals</a>
+          </nav>
+        </div>
+        <div class="header-right">
+          <form class="search-form" id="searchForm">
+            <input
+              type="search"
+              class="search-input"
+              placeholder="Search products..."
+              id="searchInput"
+            />
+            <button type="submit" class="search-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.3-4.3" />
+              </svg>
+            </button>
+          </form>
+          <div class="header-actions">
+            <a href="cart.html" class="action-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="8" cy="21" r="1" />
+                <circle cx="19" cy="21" r="1" />
+                <path
+                  d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+                />
+              </svg>
+            </a>
+            <a href="account.html" class="action-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section
+        style="
+          background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+          color: white;
+          padding: 3rem 0;
+        "
+      >
+        <div class="container">
+          <div style="text-align: center">
+            <h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 1rem">
+              🔥 Hot Deals & Offers
+            </h1>
+            <p
+              style="
+                font-size: 1.125rem;
+                opacity: 0.9;
+                max-width: 36rem;
+                margin: 0 auto 2rem;
+              "
+            >
+              Save big on the latest electronics! Limited time offers with up to
+              50% off on selected items.
+            </p>
+            <div
+              style="
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                background: rgba(255, 255, 255, 0.2);
+                padding: 0.5rem 1rem;
+                border-radius: 0.5rem;
+                font-size: 0.875rem;
+              "
+            >
+              ⏰ <span>Limited time offers - Hurry up!</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="container">
+        <div class="section">
+          <!-- Breadcrumb -->
+          <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span>Deals & Offers</span>
+          </div>
+
+          <!-- Deal of the Day -->
+          <section style="margin-bottom: 3rem">
+            <div
+              style="
+                background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+                color: white;
+                border-radius: 1rem;
+                padding: 2rem;
+                text-align: center;
+                margin-bottom: 2rem;
+              "
+            >
+              <div
+                style="
+                  background: rgba(255, 255, 255, 0.2);
+                  display: inline-block;
+                  padding: 0.5rem 1rem;
+                  border-radius: 0.5rem;
+                  font-size: 0.875rem;
+                  margin-bottom: 1rem;
+                "
+              >
+                ⭐ Deal of the Day
+              </div>
+              <h2
+                style="font-size: 2rem; font-weight: 600; margin-bottom: 1rem"
+              >
+                iPhone 15 Pro - 35% OFF
+              </h2>
+              <p style="margin-bottom: 1.5rem; opacity: 0.9">
+                Limited time offer! Get the latest iPhone with unprecedented
+                discount.
+              </p>
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 1rem;
+                  margin-bottom: 1.5rem;
+                "
+              >
+                <span
+                  style="
+                    font-size: 2rem;
+                    font-weight: 700;
+                    text-decoration: line-through;
+                    opacity: 0.7;
+                  "
+                  >$1099</span
+                >
+                <span style="font-size: 3rem; font-weight: 700">$699</span>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 1rem;
+                  margin-bottom: 1.5rem;
+                "
+              >
+                <span style="font-size: 0.875rem">Offer ends in:</span>
+                <div
+                  id="countdown"
+                  style="
+                    display: flex;
+                    gap: 0.5rem;
+                    font-weight: 600;
+                    font-size: 1.125rem;
+                  "
+                >
+                  <span id="hours">12</span>: <span id="minutes">34</span>:
+                  <span id="seconds">56</span>
+                </div>
+              </div>
+              <button class="btn btn-white" style="font-size: 1.125rem">
+                Claim Deal Now
+              </button>
+            </div>
+          </section>
+
+          <!-- Flash Sales -->
+          <section style="margin-bottom: 3rem">
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 1.5rem;
+              "
+            >
+              <div>
+                <h2
+                  style="
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    margin-bottom: 0.5rem;
+                  "
+                >
+                  ⚡ Flash Sales
+                </h2>
+                <p style="color: #6b7280">
+                  Up to 50% off on selected electronics - Limited quantities!
+                </p>
+              </div>
+              <div
+                style="
+                  background: #ef4444;
+                  color: white;
+                  padding: 0.5rem 1rem;
+                  border-radius: 0.5rem;
+                  font-size: 0.875rem;
+                  font-weight: 500;
+                "
+              >
+                Ends in 2 hours
+              </div>
+            </div>
+            <div class="products-grid" id="flashSales">
+              <!-- Flash sale products will be loaded here -->
+            </div>
+          </section>
+
+          <!-- Category Deals -->
+          <section style="margin-bottom: 3rem">
+            <h2
+              style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1.5rem"
+            >
+              🏷️ Category Deals
+            </h2>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 1.5rem;
+              "
+            >
+              <div
+                style="
+                  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+                  border-radius: 0.5rem;
+                  padding: 2rem;
+                  color: white;
+                  text-align: center;
+                "
+              >
+                <div
+                  style="
+                    font-size: 3rem;
+                    margin-bottom: 1rem;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  📱
+                </div>
+                <h3
+                  style="
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                    margin-bottom: 0.5rem;
+                  "
+                >
+                  Smartphones
+                </h3>
+                <p style="margin-bottom: 1rem; opacity: 0.9">
+                  Up to 40% off on latest models
+                </p>
+                <div
+                  style="
+                    background: rgba(255, 255, 255, 0.2);
+                    padding: 0.5rem 1rem;
+                    border-radius: 0.25rem;
+                    font-size: 0.875rem;
+                    margin-bottom: 1rem;
+                  "
+                >
+                  Save up to $400
+                </div>
+                <a href="smartphones.html" class="btn btn-white">Shop Now</a>
+              </div>
+
+              <div
+                style="
+                  background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+                  border-radius: 0.5rem;
+                  padding: 2rem;
+                  color: white;
+                  text-align: center;
+                "
+              >
+                <div
+                  style="
+                    font-size: 3rem;
+                    margin-bottom: 1rem;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  🎧
+                </div>
+                <h3
+                  style="
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                    margin-bottom: 0.5rem;
+                  "
+                >
+                  Accessories
+                </h3>
+                <p style="margin-bottom: 1rem; opacity: 0.9">
+                  Best deals on audio & wearables
+                </p>
+                <div
+                  style="
+                    background: rgba(255, 255, 255, 0.2);
+                    padding: 0.5rem 1rem;
+                    border-radius: 0.25rem;
+                    font-size: 0.875rem;
+                    margin-bottom: 1rem;
+                  "
+                >
+                  Save up to $150
+                </div>
+                <a href="accessories.html" class="btn btn-white">Shop Now</a>
+              </div>
+
+              <div
+                style="
+                  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+                  border-radius: 0.5rem;
+                  padding: 2rem;
+                  color: white;
+                  text-align: center;
+                "
+              >
+                <div
+                  style="
+                    font-size: 3rem;
+                    margin-bottom: 1rem;
+                    display: flex;
+                    justify-content: center;
+                  "
+                >
+                  🔋
+                </div>
+                <h3
+                  style="
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                    margin-bottom: 0.5rem;
+                  "
+                >
+                  Power Banks
+                </h3>
+                <p style="margin-bottom: 1rem; opacity: 0.9">
+                  Essential charging solutions
+                </p>
+                <div
+                  style="
+                    background: rgba(255, 255, 255, 0.2);
+                    padding: 0.5rem 1rem;
+                    border-radius: 0.25rem;
+                    font-size: 0.875rem;
+                    margin-bottom: 1rem;
+                  "
+                >
+                  Save up to $30
+                </div>
+                <a href="accessories.html" class="btn btn-white">Shop Now</a>
+              </div>
+            </div>
+          </section>
+
+          <!-- Weekly Offers -->
+          <section>
+            <div class="section-header">
+              <h2 class="section-title">📅 Weekly Offers</h2>
+              <div class="sort-controls">
+                <label for="sortSelect">Sort by:</label>
+                <select id="sortSelect" class="sort-select">
+                  <option value="discount">Highest Discount</option>
+                  <option value="price-low">Price: Low to High</option>
+                  <option value="price-high">Price: High to Low</option>
+                  <option value="rating">Highest Rated</option>
+                </select>
+              </div>
+            </div>
+            <div class="products-grid" id="weeklyOffers">
+              <!-- Weekly offers will be loaded here -->
+            </div>
+          </section>
+
+          <!-- Newsletter Signup -->
+          <section
+            style="
+              background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+              color: white;
+              border-radius: 0.5rem;
+              padding: 3rem;
+              text-align: center;
+              margin-top: 4rem;
+            "
+          >
+            <h2 style="font-size: 2rem; font-weight: 600; margin-bottom: 1rem">
+              🎯 Never Miss a Deal
+            </h2>
+            <p
+              style="
+                font-size: 1.125rem;
+                opacity: 0.9;
+                max-width: 32rem;
+                margin: 0 auto 2rem;
+              "
+            >
+              Subscribe to get exclusive deals and early access to flash sales
+              before anyone else!
+            </p>
+            <form
+              style="display: flex; gap: 1rem; max-width: 24rem; margin: 0 auto"
+              id="dealsNewsletter"
+            >
+              <input
+                type="email"
+                placeholder="Enter your email"
+                style="
+                  flex: 1;
+                  padding: 0.75rem;
+                  border: none;
+                  border-radius: 0.375rem;
+                  font-size: 0.875rem;
+                "
+                required
+              />
+              <button type="submit" class="btn btn-white">Get Deals</button>
+            </form>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3 class="footer-title">ElectroShop</h3>
+            <p class="footer-description">
+              Your one-stop destination for all electronics and accessories.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4 class="footer-subtitle">Shop</h4>
+            <ul class="footer-links">
+              <li><a href="electronics.html">Electronics</a></li>
+              <li><a href="smartphones.html">Smartphones</a></li>
+              <li><a href="accessories.html">Accessories</a></li>
+              <li><a href="new-arrivals.html">New Arrivals</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4 class="footer-subtitle">Support</h4>
+            <ul class="footer-links">
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="faq.html">FAQs</a></li>
+              <li><a href="shipping.html">Shipping Info</a></li>
+              <li><a href="returns.html">Returns & Refunds</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4 class="footer-subtitle">Stay Connected</h4>
+            <div class="social-links">
+              <a href="#" class="social-link">Facebook</a>
+              <a href="#" class="social-link">Instagram</a>
+              <a href="#" class="social-link">Twitter</a>
+              <a href="#" class="social-link">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 ElectroShop. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Load products with discounts for deals
+        const allProducts = getProductsByCategory("Electronics");
+
+        // Flash sales - products with original prices (indicating discounts)
+        const flashSaleProducts = allProducts
+          .filter((product) => product.originalPrice)
+          .slice(0, 4);
+        displayProducts(flashSaleProducts, "flashSales");
+
+        // Weekly offers - all products
+        displayProducts(allProducts, "weeklyOffers");
+
+        // Countdown timer
+        function updateCountdown() {
+          const now = new Date().getTime();
+          const endTime =
+            now + 12 * 60 * 60 * 1000 + 34 * 60 * 1000 + 56 * 1000; // 12:34:56 from now
+
+          setInterval(() => {
+            const now = new Date().getTime();
+            const distance = endTime - now;
+
+            const hours = Math.floor(
+              (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+            );
+            const minutes = Math.floor(
+              (distance % (1000 * 60 * 60)) / (1000 * 60),
+            );
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("hours").textContent = hours
+              .toString()
+              .padStart(2, "0");
+            document.getElementById("minutes").textContent = minutes
+              .toString()
+              .padStart(2, "0");
+            document.getElementById("seconds").textContent = seconds
+              .toString()
+              .padStart(2, "0");
+
+            if (distance < 0) {
+              document.getElementById("countdown").innerHTML = "EXPIRED";
+            }
+          }, 1000);
+        }
+
+        updateCountdown();
+
+        // Newsletter form
+        document
+          .getElementById("dealsNewsletter")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
+            const email = e.target.querySelector('input[type="email"]').value;
+            alert(
+              `Thank you for subscribing! We'll send exclusive deals to ${email}.`,
+            );
+            e.target.reset();
+          });
+
+        // Sort functionality
+        document
+          .getElementById("sortSelect")
+          .addEventListener("change", function (e) {
+            const sortBy = e.target.value;
+            let sortedProducts;
+
+            if (sortBy === "discount") {
+              // Sort by discount percentage (products with originalPrice first)
+              sortedProducts = allProducts.sort((a, b) => {
+                const aDiscount = a.originalPrice
+                  ? ((a.originalPrice - a.price) / a.originalPrice) * 100
+                  : 0;
+                const bDiscount = b.originalPrice
+                  ? ((b.originalPrice - b.price) / b.originalPrice) * 100
+                  : 0;
+                return bDiscount - aDiscount;
+              });
+            } else {
+              sortedProducts = sortProducts(allProducts, sortBy);
+            }
+
+            displayProducts(sortedProducts, "weeklyOffers");
+          });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1085 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Account - ElectroShop</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="component.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container header-content">
+        <div class="header-left">
+          <a href="index.html" class="logo">ElectroShop</a>
+          <nav class="main-nav">
+            <div class="nav-item dropdown">
+              <button class="nav-button" id="electronicsDropdown">
+                Electronics
+                <svg
+                  class="dropdown-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="dropdown-menu" id="electronicsMenu">
+                <a href="electronics.html" class="dropdown-item">
+                  <div class="dropdown-title">All Electronics</div>
+                  <div class="dropdown-desc">
+                    Browse our full range of electronic products
+                  </div>
+                </a>
+                <a href="smartphones.html" class="dropdown-item">
+                  <div class="dropdown-title">Smartphones</div>
+                  <div class="dropdown-desc">
+                    Latest smartphones with cutting-edge technology
+                  </div>
+                </a>
+                <a href="accessories.html" class="dropdown-item">
+                  <div class="dropdown-title">Accessories</div>
+                  <div class="dropdown-desc">
+                    Enhance your device experience
+                  </div>
+                </a>
+              </div>
+            </div>
+            <a href="new-arrivals.html" class="nav-link">New Arrivals</a>
+            <a href="deals.html" class="nav-link">Deals</a>
+          </nav>
+        </div>
+        <div class="header-right">
+          <form class="search-form" id="searchForm">
+            <input
+              type="search"
+              class="search-input"
+              placeholder="Search products..."
+              id="searchInput"
+            />
+            <button type="submit" class="search-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.3-4.3" />
+              </svg>
+            </button>
+          </form>
+          <div class="header-actions">
+            <a href="cart.html" class="action-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="8" cy="21" r="1" />
+                <circle cx="19" cy="21" r="1" />
+                <path
+                  d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+                />
+              </svg>
+            </a>
+            <a href="account.html" class="action-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <div class="container">
+        <div class="section">
+          <!-- Breadcrumb -->
+          <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span>My Account</span>
+          </div>
+
+          <!-- Login/Register Forms -->
+          <div id="authForms">
+            <div style="max-width: 28rem; margin: 0 auto; text-align: center">
+              <h1
+                style="font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem"
+              >
+                Welcome to ElectroShop
+              </h1>
+              <p style="color: #6b7280; margin-bottom: 2rem">
+                Sign in to your account or create a new one to get started.
+              </p>
+
+              <!-- Tab Switcher -->
+              <div
+                style="
+                  display: flex;
+                  background: #f3f4f6;
+                  border-radius: 0.5rem;
+                  padding: 0.25rem;
+                  margin-bottom: 2rem;
+                "
+              >
+                <button
+                  id="loginTab"
+                  class="auth-tab active"
+                  style="
+                    flex: 1;
+                    padding: 0.75rem;
+                    border: none;
+                    background: white;
+                    border-radius: 0.375rem;
+                    font-weight: 500;
+                    cursor: pointer;
+                    transition: all 0.15s ease;
+                  "
+                >
+                  Sign In
+                </button>
+                <button
+                  id="registerTab"
+                  class="auth-tab"
+                  style="
+                    flex: 1;
+                    padding: 0.75rem;
+                    border: none;
+                    background: transparent;
+                    border-radius: 0.375rem;
+                    font-weight: 500;
+                    cursor: pointer;
+                    transition: all 0.15s ease;
+                    color: #6b7280;
+                  "
+                >
+                  Register
+                </button>
+              </div>
+
+              <!-- Login Form -->
+              <div id="loginForm" class="auth-form">
+                <form id="loginFormSubmit">
+                  <div class="form-group">
+                    <label for="loginEmail" class="form-label">Email</label>
+                    <input
+                      type="email"
+                      id="loginEmail"
+                      class="form-input"
+                      placeholder="Enter your email"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="loginPassword" class="form-label"
+                      >Password</label
+                    >
+                    <input
+                      type="password"
+                      id="loginPassword"
+                      class="form-input"
+                      placeholder="Enter your password"
+                      required
+                    />
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      margin-bottom: 1.5rem;
+                    "
+                  >
+                    <label
+                      style="
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5rem;
+                        font-size: 0.875rem;
+                      "
+                    >
+                      <input type="checkbox" style="margin: 0" />
+                      Remember me
+                    </label>
+                    <a
+                      href="#"
+                      style="
+                        font-size: 0.875rem;
+                        color: #3b82f6;
+                        text-decoration: none;
+                      "
+                    >
+                      Forgot password?
+                    </a>
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    style="width: 100%; margin-bottom: 1rem"
+                  >
+                    Sign In
+                  </button>
+                </form>
+                <p style="font-size: 0.875rem; color: #6b7280">
+                  Demo credentials: john@example.com / password123
+                </p>
+              </div>
+
+              <!-- Register Form -->
+              <div id="registerForm" class="auth-form" style="display: none">
+                <form id="registerFormSubmit">
+                  <div class="form-group">
+                    <label for="registerName" class="form-label"
+                      >Full Name</label
+                    >
+                    <input
+                      type="text"
+                      id="registerName"
+                      class="form-input"
+                      placeholder="Enter your full name"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="registerEmail" class="form-label">Email</label>
+                    <input
+                      type="email"
+                      id="registerEmail"
+                      class="form-input"
+                      placeholder="Enter your email"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="registerPassword" class="form-label"
+                      >Password</label
+                    >
+                    <input
+                      type="password"
+                      id="registerPassword"
+                      class="form-input"
+                      placeholder="Create a password"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="confirmPassword" class="form-label"
+                      >Confirm Password</label
+                    >
+                    <input
+                      type="password"
+                      id="confirmPassword"
+                      class="form-input"
+                      placeholder="Confirm your password"
+                      required
+                    />
+                  </div>
+                  <div style="margin-bottom: 1.5rem">
+                    <label
+                      style="
+                        display: flex;
+                        align-items: start;
+                        gap: 0.5rem;
+                        font-size: 0.875rem;
+                      "
+                    >
+                      <input
+                        type="checkbox"
+                        style="margin-top: 0.125rem"
+                        required
+                      />
+                      <span
+                        >I agree to the
+                        <a
+                          href="#"
+                          style="color: #3b82f6; text-decoration: none"
+                          >Terms of Service</a
+                        >
+                        and
+                        <a
+                          href="#"
+                          style="color: #3b82f6; text-decoration: none"
+                          >Privacy Policy</a
+                        ></span
+                      >
+                    </label>
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    style="width: 100%"
+                  >
+                    Create Account
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Account Dashboard (hidden by default) -->
+          <div id="accountDashboard" style="display: none">
+            <div
+              style="display: grid; grid-template-columns: 1fr 3fr; gap: 2rem"
+            >
+              <!-- Sidebar -->
+              <div>
+                <div
+                  style="
+                    background: #f8fafc;
+                    border-radius: 0.5rem;
+                    padding: 1.5rem;
+                    margin-bottom: 1rem;
+                  "
+                >
+                  <div style="text-align: center; margin-bottom: 1rem">
+                    <div
+                      style="
+                        width: 4rem;
+                        height: 4rem;
+                        background: #3b82f6;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0 auto 0.5rem;
+                        color: white;
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                      "
+                    >
+                      J
+                    </div>
+                    <h3
+                      style="font-weight: 600; margin-bottom: 0.25rem"
+                      id="userName"
+                    >
+                      John Doe
+                    </h3>
+                    <p
+                      style="color: #6b7280; font-size: 0.875rem"
+                      id="userEmail"
+                    >
+                      john@example.com
+                    </p>
+                  </div>
+                  <button
+                    id="logoutBtn"
+                    class="btn btn-outline"
+                    style="width: 100%; font-size: 0.875rem"
+                  >
+                    Sign Out
+                  </button>
+                </div>
+
+                <nav
+                  style="
+                    background: white;
+                    border: 1px solid #e5e7eb;
+                    border-radius: 0.5rem;
+                    overflow: hidden;
+                  "
+                >
+                  <a
+                    href="#"
+                    class="account-nav-item active"
+                    data-section="overview"
+                    style="
+                      display: block;
+                      padding: 1rem;
+                      border-bottom: 1px solid #e5e7eb;
+                      text-decoration: none;
+                      color: #1f2937;
+                      background: #f3f4f6;
+                    "
+                  >
+                    📊 Account Overview
+                  </a>
+                  <a
+                    href="#"
+                    class="account-nav-item"
+                    data-section="orders"
+                    style="
+                      display: block;
+                      padding: 1rem;
+                      border-bottom: 1px solid #e5e7eb;
+                      text-decoration: none;
+                      color: #1f2937;
+                    "
+                  >
+                    📦 Order History
+                  </a>
+                  <a
+                    href="#"
+                    class="account-nav-item"
+                    data-section="wishlist"
+                    style="
+                      display: block;
+                      padding: 1rem;
+                      border-bottom: 1px solid #e5e7eb;
+                      text-decoration: none;
+                      color: #1f2937;
+                    "
+                  >
+                    ❤️ Wishlist
+                  </a>
+                  <a
+                    href="#"
+                    class="account-nav-item"
+                    data-section="addresses"
+                    style="
+                      display: block;
+                      padding: 1rem;
+                      border-bottom: 1px solid #e5e7eb;
+                      text-decoration: none;
+                      color: #1f2937;
+                    "
+                  >
+                    📍 Addresses
+                  </a>
+                  <a
+                    href="#"
+                    class="account-nav-item"
+                    data-section="settings"
+                    style="
+                      display: block;
+                      padding: 1rem;
+                      text-decoration: none;
+                      color: #1f2937;
+                    "
+                  >
+                    ⚙️ Settings
+                  </a>
+                </nav>
+              </div>
+
+              <!-- Content Area -->
+              <div>
+                <!-- Overview Section -->
+                <div id="overviewSection" class="account-section">
+                  <h2
+                    style="
+                      font-size: 1.5rem;
+                      font-weight: 600;
+                      margin-bottom: 1.5rem;
+                    "
+                  >
+                    Account Overview
+                  </h2>
+
+                  <div
+                    style="
+                      display: grid;
+                      grid-template-columns: repeat(
+                        auto-fit,
+                        minmax(200px, 1fr)
+                      );
+                      gap: 1rem;
+                      margin-bottom: 2rem;
+                    "
+                  >
+                    <div
+                      style="
+                        background: linear-gradient(
+                          135deg,
+                          #3b82f6 0%,
+                          #1d4ed8 100%
+                        );
+                        color: white;
+                        border-radius: 0.5rem;
+                        padding: 1.5rem;
+                      "
+                    >
+                      <h3
+                        style="
+                          font-size: 2rem;
+                          font-weight: 700;
+                          margin-bottom: 0.5rem;
+                        "
+                      >
+                        5
+                      </h3>
+                      <p style="opacity: 0.9">Total Orders</p>
+                    </div>
+                    <div
+                      style="
+                        background: linear-gradient(
+                          135deg,
+                          #10b981 0%,
+                          #059669 100%
+                        );
+                        color: white;
+                        border-radius: 0.5rem;
+                        padding: 1.5rem;
+                      "
+                    >
+                      <h3
+                        style="
+                          font-size: 2rem;
+                          font-weight: 700;
+                          margin-bottom: 0.5rem;
+                        "
+                      >
+                        $1,247
+                      </h3>
+                      <p style="opacity: 0.9">Total Spent</p>
+                    </div>
+                    <div
+                      style="
+                        background: linear-gradient(
+                          135deg,
+                          #f59e0b 0%,
+                          #d97706 100%
+                        );
+                        color: white;
+                        border-radius: 0.5rem;
+                        padding: 1.5rem;
+                      "
+                    >
+                      <h3
+                        style="
+                          font-size: 2rem;
+                          font-weight: 700;
+                          margin-bottom: 0.5rem;
+                        "
+                      >
+                        3
+                      </h3>
+                      <p style="opacity: 0.9">Wishlist Items</p>
+                    </div>
+                  </div>
+
+                  <div
+                    style="
+                      background: white;
+                      border: 1px solid #e5e7eb;
+                      border-radius: 0.5rem;
+                      padding: 1.5rem;
+                    "
+                  >
+                    <h3 style="font-weight: 600; margin-bottom: 1rem">
+                      Recent Activity
+                    </h3>
+                    <div
+                      style="display: flex; flex-direction: column; gap: 1rem"
+                    >
+                      <div
+                        style="
+                          display: flex;
+                          align-items: center;
+                          gap: 1rem;
+                          padding-bottom: 1rem;
+                          border-bottom: 1px solid #e5e7eb;
+                        "
+                      >
+                        <div
+                          style="
+                            width: 3rem;
+                            height: 3rem;
+                            background: #10b981;
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: white;
+                          "
+                        >
+                          ✓
+                        </div>
+                        <div>
+                          <p style="font-weight: 500; margin-bottom: 0.25rem">
+                            Order #1234 delivered
+                          </p>
+                          <p style="font-size: 0.875rem; color: #6b7280">
+                            2 days ago
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        style="
+                          display: flex;
+                          align-items: center;
+                          gap: 1rem;
+                          padding-bottom: 1rem;
+                          border-bottom: 1px solid #e5e7eb;
+                        "
+                      >
+                        <div
+                          style="
+                            width: 3rem;
+                            height: 3rem;
+                            background: #3b82f6;
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: white;
+                          "
+                        >
+                          📦
+                        </div>
+                        <div>
+                          <p style="font-weight: 500; margin-bottom: 0.25rem">
+                            Order #1233 shipped
+                          </p>
+                          <p style="font-size: 0.875rem; color: #6b7280">
+                            5 days ago
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        style="display: flex; align-items: center; gap: 1rem"
+                      >
+                        <div
+                          style="
+                            width: 3rem;
+                            height: 3rem;
+                            background: #f59e0b;
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: white;
+                          "
+                        >
+                          ❤️
+                        </div>
+                        <div>
+                          <p style="font-weight: 500; margin-bottom: 0.25rem">
+                            Added iPhone 15 Pro to wishlist
+                          </p>
+                          <p style="font-size: 0.875rem; color: #6b7280">
+                            1 week ago
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Orders Section -->
+                <div
+                  id="ordersSection"
+                  class="account-section"
+                  style="display: none"
+                >
+                  <h2
+                    style="
+                      font-size: 1.5rem;
+                      font-weight: 600;
+                      margin-bottom: 1.5rem;
+                    "
+                  >
+                    Order History
+                  </h2>
+
+                  <div
+                    style="
+                      background: white;
+                      border: 1px solid #e5e7eb;
+                      border-radius: 0.5rem;
+                      overflow: hidden;
+                    "
+                  >
+                    <div
+                      style="
+                        background: #f8fafc;
+                        padding: 1rem;
+                        border-bottom: 1px solid #e5e7eb;
+                      "
+                    >
+                      <div
+                        style="
+                          display: grid;
+                          grid-template-columns: 1fr 1fr 1fr 1fr auto;
+                          gap: 1rem;
+                          font-weight: 600;
+                        "
+                      >
+                        <span>Order ID</span>
+                        <span>Date</span>
+                        <span>Status</span>
+                        <span>Total</span>
+                        <span>Action</span>
+                      </div>
+                    </div>
+                    <div
+                      style="padding: 1rem; border-bottom: 1px solid #e5e7eb"
+                    >
+                      <div
+                        style="
+                          display: grid;
+                          grid-template-columns: 1fr 1fr 1fr 1fr auto;
+                          gap: 1rem;
+                          align-items: center;
+                        "
+                      >
+                        <span style="font-weight: 500">#1234</span>
+                        <span style="color: #6b7280">Dec 15, 2023</span>
+                        <span class="badge badge-success">Delivered</span>
+                        <span style="font-weight: 600">$999.00</span>
+                        <button
+                          class="btn btn-outline"
+                          style="font-size: 0.875rem; padding: 0.5rem 1rem"
+                        >
+                          View
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      style="padding: 1rem; border-bottom: 1px solid #e5e7eb"
+                    >
+                      <div
+                        style="
+                          display: grid;
+                          grid-template-columns: 1fr 1fr 1fr 1fr auto;
+                          gap: 1rem;
+                          align-items: center;
+                        "
+                      >
+                        <span style="font-weight: 500">#1233</span>
+                        <span style="color: #6b7280">Dec 10, 2023</span>
+                        <span
+                          class="badge"
+                          style="
+                            background: #fef3c7;
+                            color: #92400e;
+                            border: 1px solid #fed7aa;
+                          "
+                          >Shipped</span
+                        >
+                        <span style="font-weight: 600">$299.00</span>
+                        <button
+                          class="btn btn-outline"
+                          style="font-size: 0.875rem; padding: 0.5rem 1rem"
+                        >
+                          Track
+                        </button>
+                      </div>
+                    </div>
+                    <div style="padding: 1rem">
+                      <div
+                        style="
+                          display: grid;
+                          grid-template-columns: 1fr 1fr 1fr 1fr auto;
+                          gap: 1rem;
+                          align-items: center;
+                        "
+                      >
+                        <span style="font-weight: 500">#1232</span>
+                        <span style="color: #6b7280">Dec 5, 2023</span>
+                        <span class="badge badge-success">Delivered</span>
+                        <span style="font-weight: 600">$199.00</span>
+                        <button
+                          class="btn btn-outline"
+                          style="font-size: 0.875rem; padding: 0.5rem 1rem"
+                        >
+                          Reorder
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Other sections (wishlist, addresses, settings) would go here -->
+                <div
+                  id="wishlistSection"
+                  class="account-section"
+                  style="display: none"
+                >
+                  <h2
+                    style="
+                      font-size: 1.5rem;
+                      font-weight: 600;
+                      margin-bottom: 1.5rem;
+                    "
+                  >
+                    My Wishlist
+                  </h2>
+                  <p style="color: #6b7280; text-align: center; padding: 2rem">
+                    Your wishlist is empty. Start adding products you love!
+                  </p>
+                </div>
+
+                <div
+                  id="addressesSection"
+                  class="account-section"
+                  style="display: none"
+                >
+                  <h2
+                    style="
+                      font-size: 1.5rem;
+                      font-weight: 600;
+                      margin-bottom: 1.5rem;
+                    "
+                  >
+                    Saved Addresses
+                  </h2>
+                  <p style="color: #6b7280; text-align: center; padding: 2rem">
+                    No saved addresses yet. Add an address to make checkout
+                    faster!
+                  </p>
+                </div>
+
+                <div
+                  id="settingsSection"
+                  class="account-section"
+                  style="display: none"
+                >
+                  <h2
+                    style="
+                      font-size: 1.5rem;
+                      font-weight: 600;
+                      margin-bottom: 1.5rem;
+                    "
+                  >
+                    Account Settings
+                  </h2>
+                  <p style="color: #6b7280; text-align: center; padding: 2rem">
+                    Account settings and preferences coming soon!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3 class="footer-title">ElectroShop</h3>
+            <p class="footer-description">
+              Your one-stop destination for all electronics and accessories.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4 class="footer-subtitle">Shop</h4>
+            <ul class="footer-links">
+              <li><a href="electronics.html">Electronics</a></li>
+              <li><a href="smartphones.html">Smartphones</a></li>
+              <li><a href="accessories.html">Accessories</a></li>
+              <li><a href="new-arrivals.html">New Arrivals</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4 class="footer-subtitle">Support</h4>
+            <ul class="footer-links">
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="faq.html">FAQs</a></li>
+              <li><a href="shipping.html">Shipping Info</a></li>
+              <li><a href="returns.html">Returns & Refunds</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4 class="footer-subtitle">Stay Connected</h4>
+            <div class="social-links">
+              <a href="#" class="social-link">Facebook</a>
+              <a href="#" class="social-link">Instagram</a>
+              <a href="#" class="social-link">Twitter</a>
+              <a href="#" class="social-link">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 ElectroShop. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Check if user is logged in
+        const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+
+        if (isLoggedIn) {
+          showDashboard();
+        } else {
+          showAuthForms();
+        }
+
+        // Tab switcher
+        document
+          .getElementById("loginTab")
+          .addEventListener("click", () => switchTab("login"));
+        document
+          .getElementById("registerTab")
+          .addEventListener("click", () => switchTab("register"));
+
+        // Form submissions
+        document
+          .getElementById("loginFormSubmit")
+          .addEventListener("submit", handleLogin);
+        document
+          .getElementById("registerFormSubmit")
+          .addEventListener("submit", handleRegister);
+
+        // Navigation
+        document.querySelectorAll(".account-nav-item").forEach((item) => {
+          item.addEventListener("click", (e) => {
+            e.preventDefault();
+            const section = e.target.getAttribute("data-section");
+            showSection(section);
+
+            // Update active state
+            document.querySelectorAll(".account-nav-item").forEach((nav) => {
+              nav.classList.remove("active");
+              nav.style.background = "transparent";
+            });
+            e.target.classList.add("active");
+            e.target.style.background = "#f3f4f6";
+          });
+        });
+
+        // Logout
+        document
+          .getElementById("logoutBtn")
+          .addEventListener("click", handleLogout);
+      });
+
+      function switchTab(tab) {
+        const loginTab = document.getElementById("loginTab");
+        const registerTab = document.getElementById("registerTab");
+        const loginForm = document.getElementById("loginForm");
+        const registerForm = document.getElementById("registerForm");
+
+        if (tab === "login") {
+          loginTab.classList.add("active");
+          loginTab.style.background = "white";
+          loginTab.style.color = "#1f2937";
+          registerTab.classList.remove("active");
+          registerTab.style.background = "transparent";
+          registerTab.style.color = "#6b7280";
+          loginForm.style.display = "block";
+          registerForm.style.display = "none";
+        } else {
+          registerTab.classList.add("active");
+          registerTab.style.background = "white";
+          registerTab.style.color = "#1f2937";
+          loginTab.classList.remove("active");
+          loginTab.style.background = "transparent";
+          loginTab.style.color = "#6b7280";
+          registerForm.style.display = "block";
+          loginForm.style.display = "none";
+        }
+      }
+
+      function handleLogin(e) {
+        e.preventDefault();
+        const email = document.getElementById("loginEmail").value;
+        const password = document.getElementById("loginPassword").value;
+
+        // Demo login - accept any credentials, but suggest the demo ones
+        if (email && password) {
+          localStorage.setItem("isLoggedIn", "true");
+          localStorage.setItem("userEmail", email);
+          localStorage.setItem(
+            "userName",
+            email === "john@example.com" ? "John Doe" : "User",
+          );
+          showDashboard();
+        } else {
+          alert("Please enter your email and password.");
+        }
+      }
+
+      function handleRegister(e) {
+        e.preventDefault();
+        const name = document.getElementById("registerName").value;
+        const email = document.getElementById("registerEmail").value;
+        const password = document.getElementById("registerPassword").value;
+        const confirmPassword =
+          document.getElementById("confirmPassword").value;
+
+        if (password !== confirmPassword) {
+          alert("Passwords do not match!");
+          return;
+        }
+
+        // Demo registration
+        localStorage.setItem("isLoggedIn", "true");
+        localStorage.setItem("userEmail", email);
+        localStorage.setItem("userName", name);
+        showDashboard();
+      }
+
+      function handleLogout() {
+        localStorage.removeItem("isLoggedIn");
+        localStorage.removeItem("userEmail");
+        localStorage.removeItem("userName");
+        showAuthForms();
+      }
+
+      function showAuthForms() {
+        document.getElementById("authForms").style.display = "block";
+        document.getElementById("accountDashboard").style.display = "none";
+      }
+
+      function showDashboard() {
+        document.getElementById("authForms").style.display = "none";
+        document.getElementById("accountDashboard").style.display = "block";
+
+        // Update user info
+        const userName = localStorage.getItem("userName") || "User";
+        const userEmail = localStorage.getItem("userEmail") || "";
+        document.getElementById("userName").textContent = userName;
+        document.getElementById("userEmail").textContent = userEmail;
+      }
+
+      function showSection(sectionName) {
+        // Hide all sections
+        document.querySelectorAll(".account-section").forEach((section) => {
+          section.style.display = "none";
+        });
+
+        // Show selected section
+        document.getElementById(sectionName + "Section").style.display =
+          "block";
+      }
+    </script>
+  </body>
+</html>

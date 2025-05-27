@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Features Comparison - ElectroShop</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="component.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container header-content">
+        <div class="header-left">
+          <a href="index.html" class="logo">ElectroShop</a>
+          <nav class="main-nav">
+            <div class="nav-item dropdown">
+              <button class="nav-button" id="electronicsDropdown">
+                Electronics
+                <svg
+                  class="dropdown-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="dropdown-menu" id="electronicsMenu">
+                <a href="electronics.html" class="dropdown-item">
+                  <div class="dropdown-title">All Electronics</div>
+                  <div class="dropdown-desc">
+                    Browse our full range of electronic products
+                  </div>
+                </a>
+                <a href="smartphones.html" class="dropdown-item">
+                  <div class="dropdown-title">Smartphones</div>
+                  <div class="dropdown-desc">
+                    Latest smartphones with cutting-edge technology
+                  </div>
+                </a>
+                <a href="accessories.html" class="dropdown-item">
+                  <div class="dropdown-title">Accessories</div>
+                  <div class="dropdown-desc">
+                    Enhance your device experience
+                  </div>
+                </a>
+              </div>
+            </div>
+            <a href="new-arrivals.html" class="nav-link">New Arrivals</a>
+            <a href="deals.html" class="nav-link">Deals</a>
+          </nav>
+        </div>
+        <div class="header-right">
+          <form class="search-form" id="searchForm">
+            <input
+              type="search"
+              class="search-input"
+              placeholder="Search products..."
+              id="searchInput"
+            />
+            <button type="submit" class="search-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.3-4.3" />
+              </svg>
+            </button>
+          </form>
+          <div class="header-actions">
+            <a href="cart.html" class="action-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="8" cy="21" r="1" />
+                <circle cx="19" cy="21" r="1" />
+                <path
+                  d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+                />
+              </svg>
+            </a>
+            <a href="account.html" class="action-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <div class="container">
+        <div class="section">
+          <!-- Breadcrumb -->
+          <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <a href="electronics.html">Electronics</a>
+            <span>/</span>
+            <a href="smartphones.html">Smartphones</a>
+            <span>/</span>
+            <a href="specs.html">Technical Specs</a>
+            <span>/</span>
+            <span>Features Comparison</span>
+          </div>
+
+          <!-- Page Header -->
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: flex-start;
+              margin-bottom: 2rem;
+            "
+          >
+            <div>
+              <h1 class="page-title">Features Comparison</h1>
+              <p class="page-description">
+                Compare technical specifications and features of our smartphone
+                models.
+              </p>
+            </div>
+            <a href="price-comparison.html" class="btn btn-outline"
+              >Switch to Price Comparison</a
+            >
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 3fr; gap: 2rem">
+            <!-- Sidebar -->
+            <div style="display: flex; flex-direction: column; gap: 1.5rem">
+              <!-- Product Selection -->
+              <div
+                style="
+                  background: #f8fafc;
+                  padding: 1.5rem;
+                  border-radius: 0.5rem;
+                "
+              >
+                <h2
+                  style="
+                    font-size: 1.25rem;
+                    font-weight: 500;
+                    margin-bottom: 1rem;
+                  "
+                >
+                  Select Products
+                </h2>
+                <div
+                  id="productSelection"
+                  style="display: flex; flex-direction: column; gap: 1rem"
+                >
+                  <!-- Will be populated by JavaScript -->
+                </div>
+              </div>
+
+              <!-- Highest Specs -->
+              <div
+                style="
+                  background: #f8fafc;
+                  padding: 1.5rem;
+                  border-radius: 0.5rem;
+                "
+              >
+                <h2
+                  style="
+                    font-size: 1.25rem;
+                    font-weight: 500;
+                    margin-bottom: 1rem;
+                  "
+                >
+                  Highest Specs
+                </h2>
+                <div id="highestSpecsSection">
+                  <p style="color: #6b7280">
+                    Select products to see the highest spec option.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Comparison Table -->
+            <div id="comparisonTable">
+              <!-- Will be populated by JavaScript -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3 class="footer-title">ElectroShop</h3>
+            <p class="footer-description">
+              Your one-stop destination for all electronics and accessories.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4 class="footer-subtitle">Shop</h4>
+            <ul class="footer-links">
+              <li><a href="electronics.html">Electronics</a></li>
+              <li><a href="smartphones.html">Smartphones</a></li>
+              <li><a href="accessories.html">Accessories</a></li>
+              <li><a href="new-arrivals.html">New Arrivals</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4 class="footer-subtitle">Support</h4>
+            <ul class="footer-links">
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="faq.html">FAQs</a></li>
+              <li><a href="shipping.html">Shipping Info</a></li>
+              <li><a href="returns.html">Returns & Refunds</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4 class="footer-subtitle">Stay Connected</h4>
+            <div class="social-links">
+              <a href="#" class="social-link">Facebook</a>
+              <a href="#" class="social-link">Instagram</a>
+              <a href="#" class="social-link">Twitter</a>
+              <a href="#" class="social-link">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 ElectroShop. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const smartphones = getProductsBySubcategory("Smartphones");
+        let selectedProducts = smartphones.slice(0, 3); // Default selection
+
+        // Initialize product selection checkboxes
+        function initializeProductSelection() {
+          const container = document.getElementById("productSelection");
+          container.innerHTML = smartphones
+            .map(
+              (product) => `
+                    <div class="checkbox-group">
+                        <input type="checkbox" 
+                               id="product-${product.id}" 
+                               class="product-checkbox checkbox" 
+                               value="${product.id}"
+                               ${selectedProducts.some((p) => p.id === product.id) ? "checked" : ""}>
+                        <div>
+                            <label for="product-${product.id}" class="checkbox-label">${product.name}</label>
+                            <div class="checkbox-description">${product.specs.processor}</div>
+                        </div>
+                    </div>
+                `,
+            )
+            .join("");
+
+          // Add event listeners
+          document.querySelectorAll(".product-checkbox").forEach((checkbox) => {
+            checkbox.addEventListener("change", updateSelection);
+          });
+        }
+
+        function updateSelection() {
+          const checkedBoxes = document.querySelectorAll(
+            ".product-checkbox:checked",
+          );
+          selectedProducts = Array.from(checkedBoxes)
+            .map((checkbox) => {
+              return getProductById(checkbox.value);
+            })
+            .filter((product) => product);
+
+          updateComparison();
+          updateHighestSpecs();
+        }
+
+        function updateComparison() {
+          displayComparisonTable(selectedProducts, "features");
+        }
+
+        function updateHighestSpecs() {
+          const container = document.getElementById("highestSpecsSection");
+
+          if (selectedProducts.length === 0) {
+            container.innerHTML =
+              '<p style="color: #6b7280;">Select products to see the highest spec option.</p>';
+            return;
+          }
+
+          // Find product with highest RAM as a proxy for best specs
+          const highestSpecs = selectedProducts.sort((a, b) => {
+            const aRam = parseInt((a.specs.ram || "0").replace(/\D/g, "")) || 0;
+            const bRam = parseInt((b.specs.ram || "0").replace(/\D/g, "")) || 0;
+            return bRam - aRam;
+          })[0];
+
+          container.innerHTML = `
+                    <div style="background: white; padding: 1rem; border-radius: 0.375rem; border: 1px solid #dbeafe;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                            <span style="font-weight: 500;">${highestSpecs.name}</span>
+                            <span class="badge" style="background: #dbeafe; color: #1e40af; border: 1px solid #93c5fd;">Best Specs</span>
+                        </div>
+                        <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0.5rem;">
+                            ${highestSpecs.specs.processor}, ${highestSpecs.specs.ram} RAM
+                        </p>
+                        <a href="product-detail.html?id=${highestSpecs.id}" class="btn btn-outline" style="width: 100%; font-size: 0.875rem; padding: 0.5rem;">
+                            View Details
+                        </a>
+                    </div>
+                `;
+        }
+
+        // Initialize
+        initializeProductSelection();
+        updateComparison();
+        updateHighestSpecs();
+      });
+    </script>
+  </body>
+</html>

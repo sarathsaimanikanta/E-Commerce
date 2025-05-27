@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Arrivals - ElectroShop</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="component.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container header-content">
+        <div class="header-left">
+          <a href="index.html" class="logo">ElectroShop</a>
+          <nav class="main-nav">
+            <div class="nav-item dropdown">
+              <button class="nav-button" id="electronicsDropdown">
+                Electronics
+                <svg
+                  class="dropdown-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="dropdown-menu" id="electronicsMenu">
+                <a href="electronics.html" class="dropdown-item">
+                  <div class="dropdown-title">All Electronics</div>
+                  <div class="dropdown-desc">
+                    Browse our full range of electronic products
+                  </div>
+                </a>
+                <a href="smartphones.html" class="dropdown-item">
+                  <div class="dropdown-title">Smartphones</div>
+                  <div class="dropdown-desc">
+                    Latest smartphones with cutting-edge technology
+                  </div>
+                </a>
+                <a href="accessories.html" class="dropdown-item">
+                  <div class="dropdown-title">Accessories</div>
+                  <div class="dropdown-desc">
+                    Enhance your device experience
+                  </div>
+                </a>
+              </div>
+            </div>
+            <a href="new-arrivals.html" class="nav-link">New Arrivals</a>
+            <a href="deals.html" class="nav-link">Deals</a>
+          </nav>
+        </div>
+        <div class="header-right">
+          <form class="search-form" id="searchForm">
+            <input
+              type="search"
+              class="search-input"
+              placeholder="Search products..."
+              id="searchInput"
+            />
+            <button type="submit" class="search-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.3-4.3" />
+              </svg>
+            </button>
+          </form>
+          <div class="header-actions">
+            <a href="cart.html" class="action-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="8" cy="21" r="1" />
+                <circle cx="19" cy="21" r="1" />
+                <path
+                  d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+                />
+              </svg>
+            </a>
+            <a href="account.html" class="action-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section
+        class="hero"
+        style="
+          padding: 3rem 0;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        "
+      >
+        <div class="container">
+          <div style="text-align: center; color: white">
+            <h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 1rem">
+              New Arrivals
+            </h1>
+            <p
+              style="
+                font-size: 1.125rem;
+                opacity: 0.9;
+                max-width: 36rem;
+                margin: 0 auto 2rem;
+              "
+            >
+              Discover the latest and greatest products just added to our
+              collection. Be the first to get your hands on cutting-edge
+              technology.
+            </p>
+            <div
+              style="
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                background: rgba(255, 255, 255, 0.2);
+                padding: 0.5rem 1rem;
+                border-radius: 0.5rem;
+                font-size: 0.875rem;
+              "
+            >
+              🆕 <span>Fresh products added weekly</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="container">
+        <div class="section">
+          <!-- Breadcrumb -->
+          <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span>New Arrivals</span>
+          </div>
+
+          <!-- New This Week -->
+          <section style="margin-bottom: 3rem">
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 1.5rem;
+              "
+            >
+              <div>
+                <h2
+                  style="
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    margin-bottom: 0.5rem;
+                  "
+                >
+                  New This Week
+                </h2>
+                <p style="color: #6b7280">
+                  The latest products that just arrived in our store
+                </p>
+              </div>
+              <div
+                style="
+                  background: #10b981;
+                  color: white;
+                  padding: 0.5rem 1rem;
+                  border-radius: 0.5rem;
+                  font-size: 0.875rem;
+                  font-weight: 500;
+                "
+              >
+                6 New Products
+              </div>
+            </div>
+            <div class="products-grid" id="newThisWeek">
+              <!-- Products will be loaded dynamically -->
+            </div>
+          </section>
+
+          <!-- Coming Soon -->
+          <section
+            style="
+              background: #f8fafc;
+              border-radius: 0.5rem;
+              padding: 2rem;
+              margin-bottom: 3rem;
+              text-align: center;
+            "
+          >
+            <h2
+              style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem"
+            >
+              Coming Soon
+            </h2>
+            <p style="color: #6b7280; margin-bottom: 2rem">
+              Exciting new products launching next month. Be the first to know!
+            </p>
+
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.5rem;
+                margin-bottom: 2rem;
+              "
+            >
+              <div
+                style="
+                  background: white;
+                  border-radius: 0.5rem;
+                  padding: 1.5rem;
+                  border: 1px solid #e5e7eb;
+                "
+              >
+                <div
+                  style="
+                    width: 4rem;
+                    height: 4rem;
+                    background: #e5e7eb;
+                    border-radius: 0.5rem;
+                    margin: 0 auto 1rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.5rem;
+                  "
+                >
+                  📱
+                </div>
+                <h3 style="font-weight: 600; margin-bottom: 0.5rem">
+                  iPhone 16 Series
+                </h3>
+                <p
+                  style="
+                    font-size: 0.875rem;
+                    color: #6b7280;
+                    margin-bottom: 1rem;
+                  "
+                >
+                  Expected Launch: March 2024
+                </p>
+                <button
+                  class="btn btn-outline"
+                  style="width: 100%; font-size: 0.875rem"
+                >
+                  Notify Me
+                </button>
+              </div>
+
+              <div
+                style="
+                  background: white;
+                  border-radius: 0.5rem;
+                  padding: 1.5rem;
+                  border: 1px solid #e5e7eb;
+                "
+              >
+                <div
+                  style="
+                    width: 4rem;
+                    height: 4rem;
+                    background: #e5e7eb;
+                    border-radius: 0.5rem;
+                    margin: 0 auto 1rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.5rem;
+                  "
+                >
+                  🎧
+                </div>
+                <h3 style="font-weight: 600; margin-bottom: 0.5rem">
+                  AirPods Pro 3
+                </h3>
+                <p
+                  style="
+                    font-size: 0.875rem;
+                    color: #6b7280;
+                    margin-bottom: 1rem;
+                  "
+                >
+                  Expected Launch: April 2024
+                </p>
+                <button
+                  class="btn btn-outline"
+                  style="width: 100%; font-size: 0.875rem"
+                >
+                  Notify Me
+                </button>
+              </div>
+
+              <div
+                style="
+                  background: white;
+                  border-radius: 0.5rem;
+                  padding: 1.5rem;
+                  border: 1px solid #e5e7eb;
+                "
+              >
+                <div
+                  style="
+                    width: 4rem;
+                    height: 4rem;
+                    background: #e5e7eb;
+                    border-radius: 0.5rem;
+                    margin: 0 auto 1rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.5rem;
+                  "
+                >
+                  ⌚
+                </div>
+                <h3 style="font-weight: 600; margin-bottom: 0.5rem">
+                  Galaxy Watch 7
+                </h3>
+                <p
+                  style="
+                    font-size: 0.875rem;
+                    color: #6b7280;
+                    margin-bottom: 1rem;
+                  "
+                >
+                  Expected Launch: May 2024
+                </p>
+                <button
+                  class="btn btn-outline"
+                  style="width: 100%; font-size: 0.875rem"
+                >
+                  Notify Me
+                </button>
+              </div>
+            </div>
+
+            <div
+              style="
+                background: #3b82f6;
+                color: white;
+                border-radius: 0.5rem;
+                padding: 1.5rem;
+                display: inline-block;
+              "
+            >
+              <h3 style="font-weight: 600; margin-bottom: 0.5rem">
+                Want early access?
+              </h3>
+              <p style="margin-bottom: 1rem; opacity: 0.9">
+                Subscribe to our newsletter and get notified 24 hours before
+                public launch!
+              </p>
+              <button class="btn btn-white">Subscribe Now</button>
+            </div>
+          </section>
+
+          <!-- Recently Added -->
+          <section>
+            <div class="section-header">
+              <h2 class="section-title">Recently Added</h2>
+              <div class="sort-controls">
+                <label for="sortSelect">Sort by:</label>
+                <select id="sortSelect" class="sort-select">
+                  <option value="newest">Newest First</option>
+                  <option value="price-low">Price: Low to High</option>
+                  <option value="price-high">Price: High to Low</option>
+                  <option value="rating">Highest Rated</option>
+                </select>
+              </div>
+            </div>
+            <div class="products-grid" id="recentlyAdded">
+              <!-- Products will be loaded dynamically -->
+            </div>
+          </section>
+
+          <!-- Newsletter Signup -->
+          <section
+            style="
+              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+              color: white;
+              border-radius: 0.5rem;
+              padding: 3rem;
+              text-align: center;
+              margin-top: 4rem;
+            "
+          >
+            <h2 style="font-size: 2rem; font-weight: 600; margin-bottom: 1rem">
+              Never Miss New Arrivals
+            </h2>
+            <p
+              style="
+                font-size: 1.125rem;
+                opacity: 0.9;
+                max-width: 32rem;
+                margin: 0 auto 2rem;
+              "
+            >
+              Get notified as soon as new products arrive. Be among the first to
+              experience the latest technology.
+            </p>
+            <form
+              style="display: flex; gap: 1rem; max-width: 24rem; margin: 0 auto"
+              id="newArrivalsNewsletter"
+            >
+              <input
+                type="email"
+                placeholder="Enter your email"
+                style="
+                  flex: 1;
+                  padding: 0.75rem;
+                  border: none;
+                  border-radius: 0.375rem;
+                  font-size: 0.875rem;
+                "
+                required
+              />
+              <button type="submit" class="btn btn-white">Subscribe</button>
+            </form>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3 class="footer-title">ElectroShop</h3>
+            <p class="footer-description">
+              Your one-stop destination for all electronics and accessories.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4 class="footer-subtitle">Shop</h4>
+            <ul class="footer-links">
+              <li><a href="electronics.html">Electronics</a></li>
+              <li><a href="smartphones.html">Smartphones</a></li>
+              <li><a href="accessories.html">Accessories</a></li>
+              <li><a href="new-arrivals.html">New Arrivals</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4 class="footer-subtitle">Support</h4>
+            <ul class="footer-links">
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="faq.html">FAQs</a></li>
+              <li><a href="shipping.html">Shipping Info</a></li>
+              <li><a href="returns.html">Returns & Refunds</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4 class="footer-subtitle">Stay Connected</h4>
+            <div class="social-links">
+              <a href="#" class="social-link">Facebook</a>
+              <a href="#" class="social-link">Instagram</a>
+              <a href="#" class="social-link">Twitter</a>
+              <a href="#" class="social-link">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 ElectroShop. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Load new arrivals (simulate newest products)
+        const allProducts = getProductsByCategory("Electronics");
+
+        // "New this week" - first 6 products
+        const newThisWeek = allProducts.slice(0, 6);
+        displayProducts(newThisWeek, "newThisWeek");
+
+        // "Recently added" - all products sorted by rating (simulating recency)
+        const recentlyAdded = sortProducts(allProducts, "rating");
+        displayProducts(recentlyAdded, "recentlyAdded");
+
+        // Newsletter form
+        document
+          .getElementById("newArrivalsNewsletter")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
+            const email = e.target.querySelector('input[type="email"]').value;
+            alert(
+              `Thank you for subscribing! We'll notify you at ${email} when new products arrive.`,
+            );
+            e.target.reset();
+          });
+
+        // Notify me buttons
+        document
+          .querySelectorAll('button:contains("Notify Me")')
+          .forEach((button) => {
+            if (button.textContent.includes("Notify Me")) {
+              button.addEventListener("click", function () {
+                alert("We'll notify you when this product launches!");
+              });
+            }
+          });
+
+        // Sort functionality
+        document
+          .getElementById("sortSelect")
+          .addEventListener("change", function (e) {
+            const sortBy = e.target.value;
+            let sortedProducts;
+
+            if (sortBy === "newest") {
+              sortedProducts = allProducts; // Default order represents newest
+            } else {
+              sortedProducts = sortProducts(allProducts, sortBy);
+            }
+
+            displayProducts(sortedProducts, "recentlyAdded");
+          });
+      });
+    </script>
+  </body>
+</html>
